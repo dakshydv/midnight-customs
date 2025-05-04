@@ -54,7 +54,7 @@ export default function GarageWebsite() {
 
           {/* Slide-in Menu */}
           <div
-            className={`fixed top-0 left-0 h-full bg-transparent transition-all sm:bg-blue-900 duration-500 ease-in-out z-40
+            className={`fixed top-0 left-0 h-full bg-transparent transition-all sm:bg-gray-900 duration-500 ease-in-out z-40
             ${isMenuOpen ? "w-full md:w-1/2 lg:w-1/3" : "w-0"}`}
           >
             {/* Menu Content - positioned to the right side of the menu bar */}
@@ -111,6 +111,7 @@ export default function GarageWebsite() {
           {/* Right Image Section */}
           <div className="flex-1 flex items-center justify-center p-4">
             <div className="w-full h-full flex items-center justify-center">
+              
               <Image
               src={'https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
               alt="Featured Content"
@@ -160,6 +161,85 @@ export default function GarageWebsite() {
           <FocusCardsDemo />
         </div>
 
+        {/* sixth */}
+        {/* <div className="min-h-screen flex items-center justify-center border-t-2 border-black">
+          <div className="w-[95vw] bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] border-zinc-200 border-1 flex max-w-[1200px] rounded-xl md:h-[500px] gap-2 h-[1200px] ">
+            <div className="w-full  rounded-l-xl 
+            ">
+              <h1 className="group text-4xl mt-6 px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+                Midnight Customs
+              </h1>
+              <div className=" px-4 mx-12">
+                <div className="mt-4">
+                  <h3 className="text-2xl font-bold">Call Us</h3>
+                  <h1 className="text-3xl font-extrabold">+1 (365) 987-4165</h1>
+                </div>
+                <div className="mt-12">
+                  <h3 className="text-2xl font-bold">Email Us</h3>
+                  <h1 className="text-3xl font-extrabold">midnightcustoms@gmail.com</h1>
+                </div>
+                <div className="mt-12">
+                  <h3 className="text-2xl font-bold">Address</h3>
+                  <h1 className="text-3xl font-extrabold">365 Healey Rd #15, Bolton, ON L7E 5C1</h1>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <Image
+              src={"https://images.unsplash.com/photo-1618418721668-0d1f72aa4bab?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+              alt="Details"
+              width={200}
+              height={300}
+              layout="responsive"
+              />
+            </div>
+          </div>
+        </div> */}
+
+        <div className="min-h-screen flex items-center justify-center ">
+          <div className="w-full max-w-[1200px] bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] border-zinc-200 border rounded-xl mx-4 my-8">
+            {/* Flex container that changes direction on mobile */}
+            <div className="flex flex-col md:flex-row md:h-[500px]">
+              
+              {/* Image section - now on the left */}
+              <div className="w-full md:w-1/2 h-[300px] md:h-full order-2 md:order-1">
+                <div className="h-full w-full relative rounded-b-xl md:rounded-r-none md:rounded-l-xl overflow-hidden">
+                  <Image
+                    src={"https://images.unsplash.com/photo-1589134723101-5abd32593adf?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                    alt="Midnight Customs Garage"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-b-xl md:rounded-r-none md:rounded-l-xl"
+                  />
+                </div>
+              </div>
+      
+                {/* Details section - now on the right */}
+              <div className="w-full md:w-1/2 p-4 md:p-6 order-1 md:order-2">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+                  Midnight Customs
+                </h1>
+                
+                <div className="space-y-8 md:mt-6 md:px-4">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold">Call Us</h3>
+                    <a className="text-2xl md:text-3xl font-extrabold" href="tel:(365) 987-4165">+1 (365) 987-4165</a>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold">Email Us</h3>
+                    <a className="text-2xl md:text-3xl font-extrabold break-words" href="mailto:midnightcustoms@gmail.com">midnightcustoms@gmail.com</a>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold">Address</h3>
+                    <a className="text-xl md:text-2xl lg:text-3xl font-extrabold" target="_blank" href="https://maps.app.goo.gl/Usw19Lxx2RztaGWLA?g_st=com.google.maps.preview.copy">365 Healey Rd #15, Bolton, ON L7E 5C1</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
