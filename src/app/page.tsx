@@ -8,6 +8,7 @@ import { Services } from "@/components/ui/Services";
 import { Contacts } from "@/components/ui/Contacts";
 import { GoogleMaps } from "@/components/ui/GoogleMaps";
 import { Footer } from "@/components/ui/Footer";
+import Form from "@/components/ui/Form";
 
 export default function GarageWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,11 +113,15 @@ export default function GarageWebsite() {
         {/* sixth */}
         <Contacts />
 
-
         {/* seventh */}
-        <GoogleMaps />
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <Form />
+        </div>
 
         {/* eight */}
+        <GoogleMaps />
+
+        {/* nine */}
         <Footer />
 
       </div>
