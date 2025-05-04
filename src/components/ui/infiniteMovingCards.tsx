@@ -16,26 +16,26 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "I took my car in for a brake replacement and was pleasantly surprised by how transparent the team was. They even showed me the worn parts before proceeding. Great experience!",
-    name: "Sarah M., Mississauga, ON",
-    title: "Excellent service and very honest staff!",
+      "Very Friendly staff and services are above and beyond. From wrapping to detailing, their every work have perfection. Best prices in the town and wide selection of vinyl. Highly recommended.",
+    name: "Simral Gill, Toronto, ON",
+    title: "Exceptional Service with Friendly Staff and Great Prices",
   },
   {
     quote:
-      "Most garages overcharge, but here I got a full oil change and tire rotation at a great price. Will definitely be coming back.",
-    name: "Jason L., Scarborough, ON",
-    title: "Affordable and quick turnaround!",
+      "Gurjot provided exceptional customer service and went above and beyond to ensure a positive experience. His dedication to providing excellent service is commendable.",
+    name: "Sehaj Sekhon, Toronto, ON",
+    title: "Outstanding Customer Service by Gurjot",
   },
   {
-    quote: "I had a weird noise coming from my engine. The mechanics diagnosed it in no time and fixed it the same day. Super grateful!",
+    quote: "Midnight Customs delivers top-notch work! Great service and exceptional attention to detail.",
     name: "Amrita S., North York, ON",
     title: "Friendly staff who really know their stuff.",
   },
   {
     quote:
       "The garage is well-maintained, and the staff are courteous and efficient. No hidden fees, just straight-up good service.",
-    name: "David K., Etobicoke, ON",
-    title: "Clean, professional, and reliable.",
+    name: "Garv Dudy, Toronto, ON",
+    title: "Top-Quality Work with Impeccable Attention to Detail",
   },
   {
     quote:

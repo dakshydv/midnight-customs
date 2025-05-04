@@ -153,7 +153,7 @@ export default function ServiceRequestForm() {
       <div className="uppercase tracking-wide text-sm text-center mt-4  text-indigo-600 font-semibold mb-1">
         Premium Auto Service
       </div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+      <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text mb-4 text-center">
         Schedule Your Service Today
       </h2>
       {isSubmitted ? (

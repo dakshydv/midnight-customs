@@ -3,9 +3,12 @@ import Image from "next/image";
 export function NextLevel() {
     return <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center mt-[100vh] bg-white py-12 px-4 sm:px-6 lg:px-8">
     <div className="flex-1 flex flex-col text-center justify-center p-8">
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+      {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
         Take Your Car to the Next Level
-      </h1>
+      </h1> */}
+      <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text">
+      Take Your Car to the Next Level
+    </h1>
       <p className="text-lg text-gray-600 max-w-xl">
         From sleek detailing to precision performance upgrades, we
         transform your car into a masterpiece. At our salon, your vehicle
