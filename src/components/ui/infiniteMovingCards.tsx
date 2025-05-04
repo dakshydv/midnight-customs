@@ -1,5 +1,4 @@
 "use client";
-
 import { InfiniteMovingCards } from "./MovingCards";
 
 export function InfiniteMovingCardsDemo() {

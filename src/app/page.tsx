@@ -1,10 +1,13 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { FocusCardsDemo } from "@/components/ui/focusCardsDemo";
-import { Slideshow } from "@/components/ui/slideshow";
-import { InfiniteMovingCardsDemo } from "@/components/ui/infiniteMovingCards";
-import Image from "next/image";
+import { NextLevel } from "@/components/ui/nextLevel";
+import { LatestWork } from "@/components/ui/LatestWork";
+import { Testimonials } from "@/components/ui/Testimonials";
+import { Services } from "@/components/ui/Services";
+import { Contacts } from "@/components/ui/Contacts";
+import { GoogleMaps } from "@/components/ui/GoogleMaps";
+import { Footer } from "@/components/ui/Footer";
 
 export default function GarageWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +17,11 @@ export default function GarageWebsite() {
     { label: "Services", href: "#" },
     { label: "Gallery", href: "#" },
     { label: "About Us", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <div className="relative min-h-full w-screen overscroll-none bg-gray-100">
+    <div id="home" className="relative min-h-full w-screen overscroll-none bg-gray-100">
       {/* Fixed Background */}
       <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/mobile-home.jpg')] sm:bg-[url('/desktop-home2.jpg')]">
         <div className="h-full">
@@ -95,158 +98,26 @@ export default function GarageWebsite() {
         {/* hero section */}
         {/* <div className="h-screen bg-transparent"></div> */}
         {/* second page */}
-        <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center mt-[100vh] bg-white py-12 px-4 sm:px-6 lg:px-8">
-          <div className="flex-1 flex flex-col text-center justify-center p-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Take Your Car to the Next Level
-            </h1>
-            <p className="text-lg text-gray-600 max-w-xl">
-              From sleek detailing to precision performance upgrades, we
-              transform your car into a masterpiece. At our salon, your vehicle
-              gets the care, style, and power it deserves—because exceptional
-              cars deserve exceptional treatment.
-            </p>
-          </div>
-
-          {/* Right Image Section */}
-          <div className="flex-1 flex items-center justify-center p-4">
-            <div className="w-full h-full flex items-center justify-center">
-              
-              <Image
-              src={'https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-              alt="Featured Content"
-              width={400}
-              height={400}
-              layout="responsive"
-              />
-            </div>
-          </div>
-        </div>
+        <NextLevel />
 
         {/* third page */}
-        <div className=" mt-20 bg-white flex-col">
-          <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-            Our Latest Work
-          </h1>
-          <Slideshow />
-        </div>
+        <LatestWork />
 
         {/* fourth */} 
-        <div className="=mt-5 md:mt-32 bg-white">
-          <h3 className="text-xl px-4 text-center md:text-3xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-            Testimonials
-          </h3>
-          <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-            Our Customer Reviews
-          </h1>
-          <InfiniteMovingCardsDemo />
-        </div>
+        <Testimonials />
 
         {/* fifth */}
-        <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
-          <div className="flex-1 flex min-w-[30vw] flex-col text-center justify-center p-8">
-            {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Our Services
-            </h1> */}
-            <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-              Our Services
-            </h1>
-            <p className="text-lg text-gray-600 max-w-xl">
-            From routine maintenance to complex repairs, we handle it all with precision and care.
-            Our skilled technicians ensure your vehicle runs smoothly, safely, and efficiently.
-            </p>
-          </div>
-
-          {/* Right Image Section */}
-          <FocusCardsDemo />
-        </div>
+        <Services />
 
         {/* sixth */}
-        {/* <div className="min-h-screen flex items-center justify-center border-t-2 border-black">
-          <div className="w-[95vw] bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] border-zinc-200 border-1 flex max-w-[1200px] rounded-xl md:h-[500px] gap-2 h-[1200px] ">
-            <div className="w-full  rounded-l-xl 
-            ">
-              <h1 className="group text-4xl mt-6 px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-                Midnight Customs
-              </h1>
-              <div className=" px-4 mx-12">
-                <div className="mt-4">
-                  <h3 className="text-2xl font-bold">Call Us</h3>
-                  <h1 className="text-3xl font-extrabold">+1 (365) 987-4165</h1>
-                </div>
-                <div className="mt-12">
-                  <h3 className="text-2xl font-bold">Email Us</h3>
-                  <h1 className="text-3xl font-extrabold">midnightcustoms@gmail.com</h1>
-                </div>
-                <div className="mt-12">
-                  <h3 className="text-2xl font-bold">Address</h3>
-                  <h1 className="text-3xl font-extrabold">365 Healey Rd #15, Bolton, ON L7E 5C1</h1>
-                </div>
-              </div>
-            </div>
-            <div className="w-full">
-              <Image
-              src={"https://images.unsplash.com/photo-1618418721668-0d1f72aa4bab?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-              alt="Details"
-              width={200}
-              height={300}
-              layout="responsive"
-              />
-            </div>
-          </div>
-        </div> */}
+        <Contacts />
 
-        <div className="min-h-screen flex items-center justify-center ">
-          <div className="w-full max-w-[1200px] bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] border-zinc-200 border rounded-xl mx-4 my-8">
-            {/* Flex container that changes direction on mobile */}
-            <div className="flex flex-col md:flex-row md:h-[500px]">
-              
-              {/* Image section - now on the left */}
-              <div className="w-full md:w-1/2 h-[300px] md:h-full order-2 md:order-1">
-                <div className="h-full w-full relative rounded-b-xl md:rounded-r-none md:rounded-l-xl overflow-hidden">
-                  <Image
-                    src={"https://images.unsplash.com/photo-1589134723101-5abd32593adf?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-                    alt="Midnight Customs Garage"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-b-xl md:rounded-r-none md:rounded-l-xl"
-                  />
-                </div>
-              </div>
-      
-                {/* Details section - now on the right */}
-              <div className="w-full md:w-1/2 p-4 md:p-6 order-1 md:order-2">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
-                  Midnight Customs
-                </h1>
-                
-                <div className="space-y-8 md:mt-6 md:px-4">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold">Call Us</h3>
-                    <a className="text-2xl md:text-3xl font-extrabold" href="tel:(365) 987-4165">+1 (365) 987-4165</a>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold">Email Us</h3>
-                    <a className="text-2xl md:text-3xl font-extrabold break-words" href="mailto:midnightcustoms@gmail.com">midnightcustoms@gmail.com</a>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold">Address</h3>
-                    <a className="text-xl md:text-2xl lg:text-3xl font-extrabold" target="_blank" href="https://maps.app.goo.gl/Usw19Lxx2RztaGWLA?g_st=com.google.maps.preview.copy">365 Healey Rd #15, Bolton, ON L7E 5C1</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* seventh */}
-        <div className="min-h-screen flex items-center justify-center bg-white">
-          <div className="h-[500px] w-screen">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.7562791458154!2d-79.73147!3d43.860879999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b23c3d45bb10d%3A0xed899660efe75814!2sMidnight%20Customs!5e0!3m2!1sen!2sin!4v1746343368375!5m2!1sen!2sin" className="w-full h-full" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
+        <GoogleMaps />
+
+        {/* eight */}
+        <Footer />
 
       </div>
 
