@@ -28,17 +28,17 @@ export function Contacts() {
           <div className="space-y-8 md:mt-6 md:px-4">
             <div>
               <h3 className="text-xl md:text-2xl font-bold">Call Us</h3>
-              <a className="text-2xl md:text-3xl font-extrabold" href="tel:(365) 987-4165">+1 (365) 987-4165</a>
+              <a className="text-xl md:text-2xl hover:cursor-pointer font-extrabold" href="tel:(365) 987-4165">+1 (365) 987-4165</a>
             </div>
             
             <div>
               <h3 className="text-xl md:text-2xl font-bold">Email Us</h3>
-              <a className="text-2xl md:text-3xl font-extrabold break-words" href="mailto:midnightcustoms@gmail.com">midnightcustoms@gmail.com</a>
+              <a className="text-xl hover:cursor-pointer md:text-xl font-extrabold break-words" href="mailto:midnightcustoms@gmail.com">midnightcustoms@gmail.com</a>
             </div>
             
             <div>
               <h3 className="text-xl md:text-2xl font-bold">Address</h3>
-              <a className="text-xl md:text-2xl lg:text-3xl font-extrabold" target="_blank" href="https://maps.app.goo.gl/Usw19Lxx2RztaGWLA?g_st=com.google.maps.preview.copy">365 Healey Rd #15, Bolton, ON L7E 5C1</a>
+              <a className="text-xl md:text-xl lg:text-xl hover:cursor-pointer font-extrabold" target="_blank" href="https://maps.app.goo.gl/Usw19Lxx2RztaGWLA?g_st=com.google.maps.preview.copy">365 Healey Rd #15, Bolton, ON L7E 5C1</a>
             </div>
           </div>
         </div>
