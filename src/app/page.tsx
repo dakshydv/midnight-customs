@@ -1,103 +1,174 @@
+"use client";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { FocusCardsDemo } from "@/components/ui/focusCardsDemo";
+import { Slideshow } from "@/components/ui/slideshow";
+import { InfiniteMovingCardsDemo } from "@/components/ui/infiniteMovingCards";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+export default function GarageWebsite() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const menuItems = [
+    { label: "Home", href: "#" },
+    { label: "Services", href: "#" },
+    { label: "Gallery", href: "#" },
+    { label: "About Us", href: "#" },
+    { label: "Contact", href: "#" },
+  ];
+
+  return (
+    <div className="relative min-h-full w-screen overscroll-none bg-gray-100">
+      {/* Fixed Background */}
+      <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/mobile-home.jpg')] sm:bg-[url('/desktop-home2.jpg')]">
+        <div className="h-full">
+          {/* navbar */}
+          <div className="h-20 px-4 w-full justify-between flex items-center">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="relative z-50"
+            >
+              {isMenuOpen ? (
+                <X
+                  strokeWidth={2.2}
+                  className="hover:cursor-pointer"
+                  size={32}
+                  color="white"
+                />
+              ) : (
+                <Menu
+                  strokeWidth={2.2}
+                  className="hover:cursor-pointer"
+                  size={32}
+                  color="white"
+                />
+              )}
+            </button>
+          </div>
+
+          {/* Dark Overlay */}
+          <div
+            className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out z-30 
+            ${isMenuOpen ? "opacity-70" : "opacity-0 pointer-events-none"}`}
+          />
+
+          {/* Slide-in Menu */}
+          <div
+            className={`fixed top-0 left-0 h-full bg-transparent transition-all sm:bg-blue-900 duration-500 ease-in-out z-40
+            ${isMenuOpen ? "w-full md:w-1/2 lg:w-1/3" : "w-0"}`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Menu Content - positioned to the right side of the menu bar */}
+            <div className="h-full flex flex-col justify-center items-end pr-12">
+              <nav className="w-full max-w-xs">
+                <ul className="space-y-6">
+                  {menuItems.map((item, index) => (
+                    <li
+                      key={index}
+                      className="text-right overflow-hidden"
+                      style={{
+                        opacity: isMenuOpen ? 1 : 0,
+                        transform: isMenuOpen
+                          ? "translateX(0)"
+                          : "translateX(-50px)",
+                        transition: `opacity 0.5s ease ${
+                          0.3 + index * 0.1
+                        }s, transform 0.5s ease ${0.3 + index * 0.1}s`,
+                      }}
+                    >
+                      <a
+                        href={item.href}
+                        className="text-white text-2xl font-medium hover:text-gray-300 transition-colors duration-200"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* main html */}
+      <div className="relative bg-white">
+        {/* hero section */}
+        {/* <div className="h-screen bg-transparent"></div> */}
+        {/* second page */}
+        <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center mt-[100vh] bg-white py-12 px-4 sm:px-6 lg:px-8">
+          <div className="flex-1 flex flex-col text-center justify-center p-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Take Your Car to the Next Level
+            </h1>
+            <p className="text-lg text-gray-600 max-w-xl">
+              From sleek detailing to precision performance upgrades, we
+              transform your car into a masterpiece. At our salon, your vehicle
+              gets the care, style, and power it deserves—because exceptional
+              cars deserve exceptional treatment.
+            </p>
+          </div>
+
+          {/* Right Image Section */}
+          <div className="flex-1 flex items-center justify-center p-4">
+            <div className="w-full h-full flex items-center justify-center">
+              {/* <img
+                src="https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Featured content"
+                className="max-w-full max-h-full object-cover rounded-lg shadow-lg"
+              /> */}
+              <Image
+              src={'https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+              alt="Featured Content"
+              width={400}
+              height={400}
+              layout="responsive"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* third page */}
+        <div className=" mt-20 bg-white flex-col">
+          <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+            Our Latest Work
+          </h1>
+          <Slideshow />
+        </div>
+
+        {/* fourth */} 
+        <div className="=mt-5 md:mt-32 bg-white">
+          <h3 className="text-xl px-4 text-center md:text-3xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+            Testimonials
+          </h3>
+          <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+            Our Customer Reviews
+          </h1>
+          <InfiniteMovingCardsDemo />
+        </div>
+
+        {/* fifth */}
+        <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+          <div className="flex-1 flex min-w-[30vw] flex-col text-center justify-center p-8">
+            {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Our Services
+            </h1> */}
+            <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
+              Our Services
+            </h1>
+            <p className="text-lg text-gray-600 max-w-xl">
+            From routine maintenance to complex repairs, we handle it all with precision and care.
+            Our skilled technicians ensure your vehicle runs smoothly, safely, and efficiently.
+            </p>
+          </div>
+
+          {/* Right Image Section */}
+          <FocusCardsDemo />
+        </div>
+
+
+      </div>
+
+      {/* Content that should appear above the background */}
     </div>
   );
 }
