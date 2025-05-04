@@ -111,11 +111,6 @@ export default function GarageWebsite() {
           {/* Right Image Section */}
           <div className="flex-1 flex items-center justify-center p-4">
             <div className="w-full h-full flex items-center justify-center">
-              {/* <img
-                src="https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Featured content"
-                className="max-w-full max-h-full object-cover rounded-lg shadow-lg"
-              /> */}
               <Image
               src={'https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
               alt="Featured Content"

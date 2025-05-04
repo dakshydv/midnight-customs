@@ -14,7 +14,7 @@ export function Slideshow() {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const goToSlide = (slideIndex: any) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
   const slides = [
