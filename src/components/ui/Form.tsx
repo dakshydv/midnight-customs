@@ -133,17 +133,17 @@ export default function ServiceRequestForm() {
         setIsSubmitted(true);
 
         // Reset form after 3 seconds
-        setTimeout(() => {
-          setFormData({
-            name: "",
-            phone: "",
-            email: "",
-            carDetails: "",
-            serviceType: serviceTypes[0],
-            additionalDetails: "",
-          });
-          setIsSubmitted(false);
-        }, 3000);
+        // setTimeout(() => {
+        //   setFormData({
+        //     name: "",
+        //     phone: "",
+        //     email: "",
+        //     carDetails: "",
+        //     serviceType: serviceTypes[0],
+        //     additionalDetails: "",
+        //   });
+        //   setIsSubmitted(false);
+        // }, 3000);
       }, 1000);
     }
   };
