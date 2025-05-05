@@ -59,7 +59,7 @@ export default function GarageWebsite() {
       </header>
 
       {/* Fixed Background */}
-      <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/mobile-home.jpg')] sm:bg-[url('/desktop-home2.jpg')]">
+      <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/work1.jpeg')] sm:bg-[url('/work10.jpeg')]">
         <div className="h-full">
           {/* navbar */}
           <div className="h-20 px-4 w-full justify-between flex items-center">

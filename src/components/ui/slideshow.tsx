@@ -19,22 +19,22 @@ export function Slideshow() {
   };
   const slides = [
     {
-      url: "/car1.png",
+      url: "/work12.jpg",
     },
     {
-      url: "/car2.jpeg",
+      url: "/work14.jpg",
     },
     {
-      url: "/car3.jpeg",
+      url: "/work4.jpeg",
     },
     {
-      url: "/car4.jpeg",
+      url: "/work11.jpg",
     },
     {
-      url: "/car5.jpeg",
+      url: "/work15.jpg",
     },
     {
-      url: "/car6.jpeg",
+      url: "/work13.jpg",
     },
   ];
   // return <div className=" group max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative">
