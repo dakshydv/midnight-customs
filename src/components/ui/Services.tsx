@@ -11,8 +11,7 @@ export function Services() {
           Our Services
         </h1>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
-          From routine maintenance to complex repairs, we handle it all with precision and care.
-          Our skilled technicians ensure your vehicle runs smoothly, safely, and efficiently.
+        We offer a wide range of premium car customization services. These include full car wraps, headlight and taillight tints, ceramic coating, professional car detailing, and paint protection film (PPF). We also provide custom stickers, chrome deletes, underglow lighting, and basic interior modifications. For those looking to level up their ride, we offer rims and spoilers on demand — tailored to your style and performance needs.
         </p>
       </div>
       

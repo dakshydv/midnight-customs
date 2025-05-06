@@ -10,10 +10,9 @@ export function NextLevel() {
       Take Your Car to the Next Level
     </h1>
       <p className="text-lg text-gray-600 max-w-xl">
-        From sleek detailing to precision performance upgrades, we
-        transform your car into a masterpiece. At our salon, your vehicle
-        gets the care, style, and power it deserves—because exceptional
-        cars deserve exceptional treatment.
+      At Midnight Customs, we’re passionate about turning everyday cars into bold, head-turning machines. We specialize in both interior and exterior modifications, delivering top-quality results with unmatched attention to detail. Our skilled team takes pride in offering the best price guarantee — lower than any other garage — without compromising on quality. We believe in doing exceptional work in a friendly, welcoming environment where your vision comes first.
+      <br /> <br />
+      <span className="font-bold">🚨 Limited Time Offer: Quick form, big savings! Drop your details to start your car mod & get 20% OFF your final total! Don’t miss out — your dream ride starts here.</span> 
       </p>
     </div>
 
