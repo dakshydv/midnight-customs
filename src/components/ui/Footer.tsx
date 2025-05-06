@@ -32,19 +32,16 @@ export function Footer() {
             <a href="https://www.tiktok.com/@mdnt_cstms" target="_blank" rel="noreferrer">
               TikTok
             </a>
-            <a href="https://snapchat.com/t/XvS0Odmf" target="_blank" rel="noreferrer">
-              Snapchat
-            </a>
-            <a href="#home">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/midnight-customs-938196364/">LinkedIn</a>
           </div>
         </div>
       </div>
 
       {/* Email Subscription Section */}
       <div className="mt-12 px-4 w-full max-w-3xl mx-auto">
-        <h2 className="text-xl font-medium text-center">Subscribe to Our Newsletter</h2>
+        <h2 className="text-xl font-medium text-center">Subscribe for Discounts and Updates</h2>
         <div className="h-[0.2px] mt-2 bg-neutral-500 w-full max-w-md mx-auto"></div>
-        <p className="text-neutral-400 text-center mt-4 mb-6">Stay updated with our latest news, offers, and events</p>
+        <p className="text-neutral-400 text-center mt-4 mb-6">Stay up to date with our latest Offers and Events</p>
 
         <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto">
           <input

@@ -1,22 +1,9 @@
 "use client";
-import { useState } from "react";
-import { BsChevronCompactLeft, BsChevronRight } from "react-icons/bs";
+import { useState, useEffect } from "react";
 
 export function Slideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const lastSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
-  };
+
   const slides = [
     {
       url: "/work12.jpg",
@@ -25,7 +12,7 @@ export function Slideshow() {
       url: "/work14.jpg",
     },
     {
-      url: "/work4.jpeg",
+      url: "/work9.jpeg",
     },
     {
       url: "/work11.jpg",
@@ -34,28 +21,36 @@ export function Slideshow() {
       url: "/work15.jpg",
     },
     {
-      url: "/work13.jpg",
+      url: "/work10.jpeg",
+    },
+    {
+      url: "/work4.jpeg",
     },
   ];
-  // return <div className=" group max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative">
+
+  // Auto swipe effect - run every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+    }, 3000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, [currentIndex, slides.length]);
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   return (
     <div className="group max-w-[100vw] md:max-w-[100vw] h-[400px] md:h-[780px] w-full relative">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-lg bg-center bg-cover bg-no-repeat duration-500"
       ></div>
-      {/* left arrow */}
-      <div className="block md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 cursor-pointer">
-        <BsChevronCompactLeft
-          onClick={prevSlide}
-          color="white"
-          strokeWidth={1.2}
-        />
-      </div>
-      {/* right arrow */}
-      <div className="block md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 cursor-pointer">
-        <BsChevronRight onClick={lastSlide} color="white" strokeWidth={1.2} />
-      </div>
+      
       <div className="flex bg-white justify-center py-2">
         {slides.map((slide, slideIndex) => (
           <div

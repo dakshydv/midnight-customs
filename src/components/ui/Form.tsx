@@ -21,15 +21,16 @@ type FormErrors = {
 };
 
 const serviceTypes = [
-  "Oil Change",
-  "Brake Service",
-  "Tire Rotation",
-  "Engine Tune-up",
-  "Battery Replacement",
-  "Air Conditioning",
-  "Transmission Service",
-  "General Inspection",
-  "Other",
+  "Car Wrap",
+  "Paint Protection Film (PPF)",
+  "Ceramic Coating",
+  "Car Detailing ",
+  "Custom Stickers",
+  "Chrome Deletes",
+  "Headlight/Taillight Tint",
+  "Interior Modification",
+  "Spoiler (on Demand)",
+  "Ground Effects Lighting",
 ];
 
 export default function ServiceRequestForm() {
@@ -151,11 +152,11 @@ export default function ServiceRequestForm() {
   return (
     <div className="bg-white shadow-xl max-w-[800px] w-full bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] border-zinc-200 border rounded-xl overflow-hidden">
       <div className="uppercase tracking-wide text-sm text-center mt-4  text-indigo-600 font-semibold mb-1">
-        Premium Auto Service
+        Schedule your service today to get a guranteed discount
       </div>
-      <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text mb-4 text-center">
+      {/* <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text mb-4 text-center">
         Schedule Your Service Today
-      </h2>
+      </h2> */}
       {isSubmitted ? (
         <div className="p-8 text-center">
           <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
@@ -164,9 +165,11 @@ export default function ServiceRequestForm() {
           <h3 className="text-lg leading-6 font-medium text-gray-900">
             Service Request Submitted
           </h3>
+          <h3 className="text-sm leading-6 font-bold text-gray-900">
+            20% discount approved
+          </h3>
           <p className="mt-2 text-sm text-gray-500">
-            Thank you for your request. Our team will contact you shortly to
-            confirm your appointment.
+            Thank you for your request. Our team will contact you within one business day.
           </p>
         </div>
       ) : (
@@ -275,7 +278,7 @@ export default function ServiceRequestForm() {
                       ? "border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500"
                       : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   } shadow-sm focus:outline-none focus:ring-2 transition duration-150 ease-in-out`}
-                  placeholder="Toyota Camry 2020"
+                  placeholder="BMW M4 2024"
                 />
                 {errors.carDetails && (
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">

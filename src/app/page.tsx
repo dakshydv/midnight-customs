@@ -15,7 +15,8 @@ export default function GarageWebsite() {
   const [showHeader, setShowHeader] = useState(false)
 
   const menuItems = [
-    { label: "Home", href: "#home" },
+    { label: "Work", href: "#work" },
+    { label: "Reviews", href: "#testimonial" },
     { label: "Services", href: "#services" },
     { label: "Gallery", href: "#work" },
     { label: "Contact", href: "#contact" },
