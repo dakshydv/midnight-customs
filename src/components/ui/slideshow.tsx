@@ -40,7 +40,7 @@ export function Slideshow() {
     return () => clearInterval(interval);
   }, [currentIndex, slides.length]);
 
-  const goToSlide = (slideIndex) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
 
@@ -52,7 +52,7 @@ export function Slideshow() {
       ></div>
       
       <div className="flex bg-white justify-center py-2">
-        {slides.map((slide, slideIndex) => (
+        {slides.map((slide, slideIndex: number) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
