@@ -15,10 +15,9 @@ export default function GarageWebsite() {
   const [showHeader, setShowHeader] = useState(false)
 
   const menuItems = [
-    { label: "Home", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Gallery", href: "#" },
-    { label: "About Us", href: "#" },
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Gallery", href: "#work" },
     { label: "Contact", href: "#contact" },
   ]
 
@@ -51,7 +50,8 @@ export default function GarageWebsite() {
           <div className="container mx-auto px-4 py-3 flex items-center justify-center">
             <div className="flex items-center space-x-3">
               <div className="flex flex-col">
-                <span className="bg-gradient-to-r from-gray-300 to-slate-400 text-transparent font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight Customs</span>
+                <span className="bg-white text-red-400 font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight Customs</span>
+                {/* <span className="bg-gradient-to-r from-gray-300 to-slate-400 text-transparent font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight Customs</span> */}
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function GarageWebsite() {
       </header>
 
       {/* Fixed Background */}
-      <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/work1.jpeg')] sm:bg-[url('/work10.jpeg')]">
+      <div className="fixed overscroll-none top-0 left-0 h-screen z-0 bg-cover bg-center bg-no-repeat bg-scroll min-h-screen w-full object-cover bg-[url('/mobile-home.jpg')] sm:bg-[url('/mobile-home.jpg')]">
         <div className="h-full">
           {/* navbar */}
           <div className="h-20 px-4 w-full justify-between flex items-center">
