@@ -46,11 +46,12 @@ export default function GarageWebsite() {
           showHeader ? "transform translate-y-0 opacity-100" : "transform -translate-y-full opacity-0"
         }`}
       >
-        <div className="[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]  bg-opacity-90 backdrop-blur-sm border-b border-zinc-200 shadow-lg">
+        <div className="bg-black bg-opacity-90 backdrop-blur-sm  shadow-lg">
+        {/* <div className="[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]  bg-opacity-90 backdrop-blur-sm border-b border-zinc-200 shadow-lg"> */}
           <div className="container mx-auto px-4 py-3 flex items-center justify-center">
             <div className="flex items-center space-x-3">
               <div className="flex flex-col">
-                <span className="bg-white text-red-400 font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight Customs</span>
+                <span className="bg-white text-red-500 font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight <span className="text-white">Customs</span></span>
                 {/* <span className="bg-gradient-to-r from-gray-300 to-slate-400 text-transparent font-bold text-xl bg-clip-text tracking-wider uppercase">Midnight Customs</span> */}
               </div>
             </div>
