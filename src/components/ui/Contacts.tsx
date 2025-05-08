@@ -34,7 +34,7 @@ export function Contacts() {
             
             <div>
               <h3 className="text-xl md:text-2xl font-bold">Email Us</h3>
-              <a className="text-xl hover:cursor-pointer md:text-xl font-extrabold break-words" href="mailto:midnightcustoms@gmail.com">midnightcustoms@gmail.com</a>
+              <a className="text-xl hover:cursor-pointer md:text-xl font-extrabold break-words" href="mailto:customs.midnightclub@gmail.com">customs.midnightclub@gmail.com</a>
             </div>
             
             <div>
