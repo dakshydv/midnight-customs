@@ -9,10 +9,13 @@ export function Slideshow() {
       url: "/work12.jpg",
     },
     {
-      url: "/work14.jpg",
+      url: "/truck.jpg",
     },
     {
       url: "/work9.jpeg",
+    },
+    {
+      url: "/honda.jpg",
     },
     {
       url: "/work11.jpg",
