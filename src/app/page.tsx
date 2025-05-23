@@ -10,51 +10,9 @@ import { GoogleMaps } from "@/components/ui/GoogleMaps";
 import { Footer } from "@/components/ui/Footer";
 import Form from "@/components/ui/Form";
 
-interface TimeRemaining {
-  total: number;
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
-function useCountdown(targetDate: Date): TimeRemaining {
-  const [timeLeft, setTimeLeft] = useState<TimeRemaining>(
-    getTimeRemaining(targetDate)
-  );
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeLeft(getTimeRemaining(targetDate));
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [targetDate]);
-
-  return timeLeft;
-}
-
-function getTimeRemaining(targetDate: Date): TimeRemaining {
-  const total = targetDate.getTime() - new Date().getTime();
-  if (total < 0) {
-    return { total: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
-  }
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  return { total, days, hours, minutes, seconds };
-}
-
 export default function GarageWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
-  const [showMobileAlert, setShowMobileAlert] = useState(false);
-  const alertTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const fifteenDaysFromNow = useRef(
-    new Date(new Date().getTime() + 15 * 24 * 60 * 60 * 1000)
-  );
-  const countdown = useCountdown(fifteenDaysFromNow.current);
 
   const menuItems = [
     { label: "Work", href: "#work" },
@@ -80,65 +38,11 @@ export default function GarageWebsite() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Show mobile alert after 1 min and repeat if dismissed
-  useEffect(() => {
-    alertTimeoutRef.current = setTimeout(() => {
-      setShowMobileAlert(true);
-    }, 15000); // 1 min
-
-    return () => {
-      if (alertTimeoutRef.current) {
-        clearTimeout(alertTimeoutRef.current);
-      }
-    };
-  }, []);
-
-  const handleDismissAlert = () => {
-    setShowMobileAlert(false);
-    alertTimeoutRef.current = setTimeout(() => {
-      setShowMobileAlert(true);
-    }, 60000); // Re-show after 1 min
-  };
-
-  // Timer display component for header right side (desktop)
-  const TimerDisplay = () => (
-    <div className="text-white bg-gradient-to-r from-red-600 to-red-800 rounded px-3 py-1 font-mono text-sm tracking-wide select-none">
-      <span>{countdown.days}d</span> <span>{countdown.hours}h</span>{" "}
-      <span>{countdown.minutes}m</span> <span>{countdown.seconds}s</span>
-    </div>
-  );
-
-  // Mobile alert timer banner
-  const MobileAlert = () =>
-    showMobileAlert ? (
-      <div className="fixed top-0 left-0 right-0 bg-red-600 text-white flex items-center justify-between px-4 py-3 text-center font-semibold z-60 shadow-lg animate-slideDown">
-        <div className="flex-grow select-none">
-          <span className="mr-2 font-bold uppercase tracking-wide">
-            Limited Time Discount Ends In:
-          </span>
-          <span className="font-mono">
-            {countdown.days}d {countdown.hours}h {countdown.minutes}m{" "}
-            {countdown.seconds}s
-          </span>
-        </div>
-        <button
-          onClick={handleDismissAlert}
-          aria-label="Dismiss alert"
-          className="ml-4 text-white hover:text-gray-300 font-black text-xl leading-none"
-        >
-          &times;
-        </button>
-      </div>
-    ) : null;
-
   return (
     <div
       id="home"
       className="relative min-h-full w-screen overscroll-none bg-gray-100"
     >
-      {/* Mobile alert */}
-      <div className="sm:hidden">{MobileAlert()}</div>
-
       {/* Scroll-activated Header */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-opacity-90 backdrop-blur-sm border-b border-zinc-200 shadow-lg ${
@@ -153,10 +57,6 @@ export default function GarageWebsite() {
             <span className="bg-gradient-to-r from-gray-300 to-slate-400 text-transparent font-bold text-xl bg-clip-text tracking-wider uppercase select-none">
               Midnight Customs
             </span>
-          </div>
-          {/* Timer on right for laptops/monitors */}
-          <div className="hidden sm:flex sm:flex-shrink-0">
-            <TimerDisplay />
           </div>
         </div>
       </header>
