@@ -16,7 +16,7 @@ export default function GarageWebsite() {
 
   const menuItems = [
     { label: "Work", href: "#work" },
-    { label: "Reviews", href: "#testimonial" },
+    { label: "Reviews", href: "#testimonials" },
     { label: "Services", href: "#services" },
     { label: "Gallery", href: "#work" },
     { label: "Contact", href: "#contact" },
@@ -91,13 +91,15 @@ export default function GarageWebsite() {
           {/* Dark Overlay */}
           <div
             className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out z-30 
-            ${isMenuOpen ? "opacity-70" : "opacity-0 pointer-events-none"}`}
+           sm:opacity-0 ${
+             isMenuOpen ? "opacity-70" : "opacity-0 pointer-events-none"
+           }`}
           />
 
           {/* Slide-in Menu */}
           <div
-            className={`fixed top-0 left-0 h-full bg-transparent transition-all sm:bg-gray-900 duration-500 ease-in-out z-40
-            ${isMenuOpen ? "w-full md:w-1/2 lg:w-1/3" : "w-0"}`}
+            className={`fixed top-0 left-0 h-full sm:bg-black transition-all duration-500 ease-in-out z-40
+            ${isMenuOpen ? "w-full opacity-70 md:w-1/2 lg:w-1/3" : "w-0"}`}
           >
             {/* Menu Content - positioned to the right side of the menu bar */}
             <div className="h-full flex flex-col justify-center items-end pr-12">
