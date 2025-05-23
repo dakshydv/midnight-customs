@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { NextLevel } from "@/components/ui/nextLevel";
 import { LatestWork } from "@/components/ui/LatestWork";
