@@ -20,6 +20,7 @@ export default function GarageWebsite() {
     { label: "Services", href: "#services" },
     { label: "Gallery", href: "#work" },
     { label: "Contact", href: "#contact" },
+    { label: "Location", href: "#maps" },
   ];
 
   useEffect(() => {
