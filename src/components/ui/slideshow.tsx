@@ -14,9 +14,9 @@ export function Slideshow() {
     {
       url: "/work9.jpeg",
     },
-    {
-      url: "/honda.jpg",
-    },
+    // {
+    //   url: "/honda.jpg",
+    // },
     {
       url: "/work11.jpg",
     },
@@ -27,7 +27,7 @@ export function Slideshow() {
       url: "/work10.jpeg",
     },
     {
-      url: "/work4.jpeg",
+      url: "/work4.jpg",
     },
   ];
 

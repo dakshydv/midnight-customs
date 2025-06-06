@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <div className="min-h-[400px] flex flex-col text-white pb-10 bg-[#262626]">
+    <div className="min-h-[30px] flex flex-col text-white pb-10 bg-[#262626]">
       <div className="pt-20 w-full flex flex-col md:flex-row justify-around px-4">
         <div className="w-full md:w-32 flex flex-col mb-8 md:mb-0">
           <h1 className="">Quick Links</h1>
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Email Subscription Section */}
+      {/* Email Subscription Section
       <div className="mt-12 px-4 w-full max-w-3xl mx-auto">
         <h2 className="text-xl font-medium text-center">Subscribe for Discounts and Updates</h2>
         <div className="h-[0.2px] mt-2 bg-neutral-500 w-full max-w-md mx-auto"></div>
@@ -57,7 +57,7 @@ export function Footer() {
             Subscribe
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }
