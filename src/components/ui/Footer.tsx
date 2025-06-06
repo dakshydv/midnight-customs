@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <div className="min-h-[30px] flex flex-col text-white pb-10 bg-[#262626]">
+    <div className="min-h-[300px] flex flex-col text-white pb-10 bg-[#262626]">
       <div className="pt-20 w-full flex flex-col md:flex-row justify-around px-4">
         <div className="w-full md:w-32 flex flex-col mb-8 md:mb-0">
           <h1 className="">Quick Links</h1>
