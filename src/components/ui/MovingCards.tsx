@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import * as motion from 'motion/react-client'
 
 export const InfiniteMovingCards = ({
   items,
@@ -73,7 +74,20 @@ export const InfiniteMovingCards = ({
   };
 
   return (
-    <div
+    <motion.div
+    initial={{ 
+      filter: "blur(10px)",
+      opacity: 0.5
+    }}
+    whileInView={{ 
+      filter: "blur(0px)",
+      opacity: 1
+    }}
+    transition={{ 
+      duration: 0.6,
+      ease: "easeOut"
+    }}
+    viewport={{ once: true }}
       ref={containerRef}
       className={cn(
         "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
@@ -115,6 +129,6 @@ export const InfiniteMovingCards = ({
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };

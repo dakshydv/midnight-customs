@@ -27,7 +27,8 @@ const testimonials = [
     title: "Outstanding Customer Service by Gurjot",
   },
   {
-    quote: "Midnight Customs delivers top-notch work! Great service and exceptional attention to detail.",
+    quote:
+      "Midnight Customs delivers top-notch work! Great service and exceptional attention to detail.",
     name: "Amrita S., North York, ON",
     title: "Friendly staff who really know their stuff.",
   },

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import * as motion from 'motion/react-client'
 
 export function Slideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +49,21 @@ export function Slideshow() {
   };
 
   return (
-    <div className="group max-w-[100vw] md:max-w-[100vw] h-[400px] md:h-[780px] w-full relative">
+    <motion.div 
+    initial={{ 
+      filter: "blur(10px)",
+      opacity: 0.5
+    }}
+    whileInView={{ 
+      filter: "blur(0px)",
+      opacity: 1
+    }}
+    transition={{ 
+      duration: 1.2,
+      ease: "easeOut"
+    }}
+    viewport={{ once: true }}
+    className="group max-w-[100vw] md:max-w-[100vw] h-[400px] md:h-[780px] w-full relative">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-lg bg-center bg-cover bg-no-repeat duration-500"
@@ -67,6 +82,6 @@ export function Slideshow() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
