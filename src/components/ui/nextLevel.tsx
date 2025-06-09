@@ -9,16 +9,16 @@ export function NextLevel() {
         Take Your Car to the Next Level
       </h1> */}
         <motion.h1 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
         className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text">
           Take Your Car to the Next Level
         </motion.h1>
         <motion.p 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
         className="text-lg text-gray-600 max-w-xl">
@@ -41,8 +41,8 @@ export function NextLevel() {
       {/* Right Image Section */}
       <div className="flex-1 flex items-center justify-center p-4">
         <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
         className="w-full h-full flex items-center justify-center">

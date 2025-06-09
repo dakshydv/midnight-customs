@@ -8,20 +8,10 @@ export function Services() {
       className="min-h-screen flex flex-col sm:flex-row items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
       <motion.div 
-      initial={{
-        opacity: 0,
-        x: -50
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0
-      }}
-      transition={{
-        duration: 0.9,
-      }}
-      viewport={{
-        once: true
-      }}
+      initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+      whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
       className="w-full sm:w-full md:w-1/3 flex flex-col text-center justify-center p-8">
         <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
           Our Services
@@ -32,20 +22,10 @@ export function Services() {
       </motion.div>
       
       <motion.div 
-      initial={{
-        opacity: 0,
-        x: 50
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0
-      }}
-      transition={{
-        duration: 0.9,
-      }}
-      viewport={{
-        once: true
-      }}
+      initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+      whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
       className="w-full lg:w-2/3 max-w-screen">
         <FocusCardsDemo />
       </motion.div>

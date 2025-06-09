@@ -13,20 +13,10 @@ export function Contacts() {
           {/* Image section - now on the left */}
           <div className="w-full md:w-1/2 h-[300px] md:h-full order-2 md:order-1">
             <motion.div
-              initial={{
-                opacity: 0,
-                filter: "blur(10px)",
-              }}
-              whileInView={{
-                opacity: 1,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                duration: 0.9,
-              }}
-              viewport={{
-                once: true,
-              }}
+              initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
               className="h-full w-full relative rounded-b-xl md:rounded-r-none md:rounded-l-xl overflow-hidden"
             >
               <Image
@@ -42,20 +32,10 @@ export function Contacts() {
 
           {/* Details section - now on the right */}
           <motion.div
-            initial={{
-              opacity: 0,
-              x: 70,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 0.9,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
             className="w-full md:w-1/2 p-4 md:p-6 order-1 md:order-2"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
