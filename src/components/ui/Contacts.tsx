@@ -1,5 +1,4 @@
 import Image from "next/image";
-import * as motion from "motion/react-client";
 
 export function Contacts() {
   return (
@@ -12,13 +11,7 @@ export function Contacts() {
         <div className="flex flex-col md:flex-row md:h-[500px]">
           {/* Image section - now on the left */}
           <div className="w-full md:w-1/2 h-[300px] md:h-full order-2 md:order-1">
-            <motion.div
-              initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-              transition={{ duration: 0.9 }}
-              viewport={{ once: true }}
-              className="h-full w-full relative rounded-b-xl md:rounded-r-none md:rounded-l-xl overflow-hidden"
-            >
+            <div className="h-full w-full relative rounded-b-xl md:rounded-r-none md:rounded-l-xl overflow-hidden">
               <Image
                 // src={"https://images.unsplash.com/photo-1589134723101-5abd32593adf?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
                 src={"/threeCars.jpg"}
@@ -27,17 +20,11 @@ export function Contacts() {
                 objectFit="cover"
                 className="rounded-b-xl md:rounded-r-none md:rounded-l-xl"
               />
-            </motion.div>
+            </div>
           </div>
 
           {/* Details section - now on the right */}
-          <motion.div
-            initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
-            whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-            transition={{ duration: 0.9 }}
-            viewport={{ once: true }}
-            className="w-full md:w-1/2 p-4 md:p-6 order-1 md:order-2"
-          >
+          <div className="w-full md:w-1/2 p-4 md:p-6 order-1 md:order-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-gray-200 via-slate-700 to-gray-200 text-transparent bg-clip-text">
               Midnight Customs
             </h1>
@@ -74,7 +61,7 @@ export function Contacts() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

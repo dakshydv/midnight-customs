@@ -1,5 +1,4 @@
 import Image from "next/image";
-import * as motion from "motion/react-client";
 
 export function NextLevel() {
   return (
@@ -8,21 +7,11 @@ export function NextLevel() {
         {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
         Take Your Car to the Next Level
       </h1> */}
-        <motion.h1 
-        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
-        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text">
+        <h1 className="text-4xl px-4 text-center md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-500 to-zinc-400 text-transparent bg-clip-text">
           Take Your Car to the Next Level
-        </motion.h1>
-        <motion.p 
-        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
-        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="text-lg text-gray-600 max-w-xl">
-          At Midnight Customs, we’re passionate about turning everyday cars into
+        </h1>
+        <p className="text-lg text-gray-600 max-w-xl">
+          At Midnight Customs, we're passionate about turning everyday cars into
           bold, head-turning machines. We specialize in both interior and
           exterior modifications, delivering top-quality results with unmatched
           attention to detail. Our skilled team takes pride in offering the best
@@ -32,20 +21,15 @@ export function NextLevel() {
           <br /> <br />
           <span className="font-bold">
             🚨 Limited Time Offer: Quick form, big savings! Drop your details to
-            start your car mod & get 20% OFF your final total! Don’t miss out —
+            start your car mod & get 20% OFF your final total! Don't miss out —
             your dream ride starts here.
           </span>
-        </motion.p>
+        </p>
       </div>
 
       {/* Right Image Section */}
       <div className="flex-1 flex items-center justify-center p-4">
-        <motion.div 
-        initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.85 }}
-        whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="w-full h-full flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-center">
           <Image
             // src={'https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?q=80&w=2658&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
             src={"/beamer2.jpg"}
@@ -54,7 +38,7 @@ export function NextLevel() {
             height={400}
             layout="responsive"
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );

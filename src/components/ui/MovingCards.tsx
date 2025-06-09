@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import * as motion from 'motion/react-client'
 
 export const InfiniteMovingCards = ({
   items,
@@ -22,7 +21,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
-  
+
   // Create a stable addAnimation function with useCallback
   const addAnimation = React.useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
@@ -50,12 +49,12 @@ export const InfiniteMovingCards = ({
       if (direction === "left") {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "forwards",
+          "forwards"
         );
       } else {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "reverse",
+          "reverse"
         );
       }
     }
@@ -74,24 +73,11 @@ export const InfiniteMovingCards = ({
   };
 
   return (
-    <motion.div
-    initial={{ 
-      filter: "blur(10px)",
-      opacity: 0.5
-    }}
-    whileInView={{ 
-      filter: "blur(0px)",
-      opacity: 1
-    }}
-    transition={{ 
-      duration: 0.6,
-      ease: "easeOut"
-    }}
-    viewport={{ once: true }}
+    <div
       ref={containerRef}
       className={cn(
         "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className,
+        className
       )}
     >
       <ul
@@ -99,7 +85,7 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]",
+          pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, index) => (
@@ -129,6 +115,6 @@ export const InfiniteMovingCards = ({
           </li>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 };

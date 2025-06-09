@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import * as motion from 'motion/react-client'
 
 export function Slideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,26 +48,12 @@ export function Slideshow() {
   };
 
   return (
-    <motion.div 
-    initial={{ 
-      filter: "blur(10px)",
-      opacity: 0.5
-    }}
-    whileInView={{ 
-      filter: "blur(0px)",
-      opacity: 1
-    }}
-    transition={{ 
-      duration: 1.2,
-      ease: "easeOut"
-    }}
-    viewport={{ once: true }}
-    className="group max-w-[100vw] md:max-w-[100vw] h-[400px] md:h-[780px] w-full relative">
+    <div className="group max-w-[100vw] md:max-w-[100vw] h-[400px] md:h-[780px] w-full relative">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-lg bg-center bg-cover bg-no-repeat duration-500"
       ></div>
-      
+
       <div className="flex bg-white justify-center py-2">
         {slides.map((slide, slideIndex: number) => (
           <div
@@ -82,6 +67,6 @@ export function Slideshow() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
