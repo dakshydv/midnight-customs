@@ -11,7 +11,7 @@ export function NextLevel() {
           Take Your Car to the Next Level
         </h1>
         <p className="text-lg text-gray-600 max-w-xl">
-          At Midnight Customs, we're passionate about turning everyday cars into
+          At Midnight Customs, we&#39;re passionate about turning everyday cars into
           bold, head-turning machines. We specialize in both interior and
           exterior modifications, delivering top-quality results with unmatched
           attention to detail. Our skilled team takes pride in offering the best
@@ -21,7 +21,7 @@ export function NextLevel() {
           <br /> <br />
           <span className="font-bold">
             🚨 Limited Time Offer: Quick form, big savings! Drop your details to
-            start your car mod & get 20% OFF your final total! Don't miss out —
+            start your car mod & get 20% OFF your final total! Don&#39;t miss out —
             your dream ride starts here.
           </span>
         </p>
