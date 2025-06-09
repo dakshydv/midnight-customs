@@ -42,7 +42,7 @@ export default function GarageWebsite() {
   return (
     <div
       id="home"
-      className="relative min-h-full w-screen overscroll-none bg-gray-100"
+      className="relative min-h-full max-w-screen w-screen overscroll-none bg-gray-100"
     >
       {/* Scroll-activated Header */}
       <header

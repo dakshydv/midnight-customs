@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 
 export function NextLevel() {
   return (
-    <div className="min-h-screen flex flex-col sm:flex-row items-center justify-center mt-[100vh] bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen max-w-screen flex flex-col sm:flex-row items-center justify-center mt-[100vh] bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="flex-1 flex flex-col text-center justify-center p-8">
         {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
         Take Your Car to the Next Level

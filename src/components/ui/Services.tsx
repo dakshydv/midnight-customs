@@ -46,7 +46,7 @@ export function Services() {
       viewport={{
         once: true
       }}
-      className="w-full sm:w-full lg:w-2/3">
+      className="w-full lg:w-2/3 max-w-screen">
         <FocusCardsDemo />
       </motion.div>
     </div>
