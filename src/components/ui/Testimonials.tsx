@@ -3,7 +3,7 @@ import * as motion from 'motion/react-client'
 
 export function Testimonials() {
   return (
-    <div id="testimonials" className="mt-5 md:mt-32 bg-white">
+    <div id="testimonials" className="mt-20 md:mt-32 bg-white">
       <motion.h3
       initial={{opacity: 0, x: -50}}
       whileInView={{opacity: 1, x: 0}}
